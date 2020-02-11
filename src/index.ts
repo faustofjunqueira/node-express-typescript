@@ -1,8 +1,5 @@
+import { Application } from './application';
+import "reflect-metadata";
 
-
-function main(str: string): string {
-	
-	return str;
-}
-
-console.log(main("Oi mundo cao"));
+// Instantiate the application 
+const app = Application.bootstrap();

@@ -1,0 +1,14 @@
+http:
+  port: 8080
+  cors:
+    allowedHeaders: '*',
+    methods: '*',
+    exposedHeaders: '*',
+    preflightContinue: true
+
+routing-controller:
+  cors: true
+  classTransformer: true
+  defaultErrorHandler: false
+  defaults:
+    nullResultCode: 404
