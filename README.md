@@ -76,5 +76,6 @@ https://github.com/expressjs/body-parser, and https://github.com/helmetjs/helmet
  - https://github.com/helmetjs/helmet
 
 ## Todos:
+ - Audit
  - Improved `cors` constraints
  - Improved `helmet` filters
