@@ -1,3 +1,4 @@
+import { NotFoundError } from './errors/NotFoundError';
 import {Controller, Get} from 'routing-controllers'
 
 
@@ -6,6 +7,6 @@ export class Junda {
 
   @Get('/')
   junda() {
-    return '<h1>Junda</h1>'
+    throw new NotFoundError('Oi mundo cao', {junda:123123});
   }
 }
