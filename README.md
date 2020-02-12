@@ -32,6 +32,8 @@ _Welcome to my boilerplate for `nodeJS`, `typescript` and `expressJS`_
  - Lovers of nodeJS
  - Companies that want to create projects that meet good practice requirements
 
+> All code of this boilerplate is opened. The reason for that is that all code is flexible. You can, and, you must read and change the code to answer your questions and requisites.
+
 ## What have in our boileiplate
  - Nodejs
  - Typescript
@@ -53,7 +55,7 @@ Really, we use the ExpressJS to processing out routes, but it's half-hidden. We 
 Another important thing is our `config` folder. It has the configuration values of the application. Is very flexile, because you can declare your configuration values, like the connection string of your database, constants, api integrations keys, etc. To manage this feature, we are using the **config** dependence. See more about it in [this](https://www.npmjs.com/package/config) link.
 
 By default, we apply the following middleware in the express application: `Body Parser`, `Cors` and `Helmet`. See about they:
-https://github.com/expressjs/body-parser, and https://github.com/helmetjs/helmet. However, if you want perform file update, you need install `multer`. See in `routing-controller` documentation
+https://github.com/expressjs/body-parser, https://github.com/expressjs/cors and https://github.com/helmetjs/helmet. However, if you want perform file update, you need install `multer`. See in [`routing-controller`](https://github.com/typestack/routing-controllers#inject-uploaded-file) documentation.
 
 ## How to start
 

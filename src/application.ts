@@ -1,4 +1,5 @@
-import { createExpressServer, useExpressServer } from 'routing-controllers'
+import { Junda } from './controller';
+import { useExpressServer } from 'routing-controllers'
 import express = require('express');
 import config = require('config');
 import cors = require('cors');
@@ -15,31 +16,18 @@ export class Application {
    * @type {express.Application}
    * @memberof Application
    */
-  private _expressApplication: express.Application;
+  private expressApplication: express.Application;
   
-  get express(): express.Application {
-    return this._expressApplication;
-  }
-
-  /**
-   * Bootstrap application
-   * Configuring the router, logs, database, etc
-   *
-   * @static
-   * @returns {Application}
-   * @memberof Application
-   */
-  public static bootstrap(): Application {
-    const app = new Application();
-    return app;
+  get httpHandler(): express.Application {
+    return this.expressApplication;
   }
 
   /**
    * Creates an instance of Application.
    * @memberof Application
    */
-  private constructor() {
-    this._expressApplication = this._configureRouting();
+  constructor() {
+    this.expressApplication = this.configureRouting();
   }
 
   /**
@@ -48,13 +36,13 @@ export class Application {
    * @private
    * @memberof Application
    */
-  private _configureRouting(): express.Application {
+  private configureRouting(): express.Application {
     // creating express application
     const application = express();
     // Increases the application buffer to 200M
     application.set("maxFieldsSize", '200 * 1024 * 1024 * 1024');
     // Enable the application's cors
-    if(config.has('http.cors') {
+    if(config.has('http.cors')) {
       application.options('*', cors()) // Enable pre-flight
       application.use(cors(config.get('http.cors')));
     }
@@ -66,7 +54,8 @@ export class Application {
     application.use(helmet());
 
     useExpressServer(application, {
-      ...config.get('routing-controller:', {})
+      ...config.get('http.routing-controller'),
+      controllers: [Junda]
     });
 
     return application;
@@ -74,3 +63,4 @@ export class Application {
 
 }
 
+export default new Application;
