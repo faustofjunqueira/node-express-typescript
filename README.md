@@ -7,15 +7,15 @@ _Welcome to my boilerplate for `nodeJS`, `typescript` and `expressJS`_
 - [node-express-typescript](#node-express-typescript)
   - [Summary](#summary)
   - [Infos](#infos)
-  - [What's the objectives of out boilerplate](#whats-the-objectives-of-out-boilerplate)
-  - [What have in our boileiplate](#what-have-in-our-boileiplate)
-  - [About our stack, You need even know!](#about-our-stack-you-need-even-know)
+  - [Objectives](#objectives)
+  - [Tecnologies](#tecnologies)
+  - [About our stack](#about-our-stack)
   - [How to start](#how-to-start)
-  - [How to development with this boilerplate](#how-to-development-with-this-boilerplate)
-  - [How to delivery this boilerplate](#how-to-delivery-this-boilerplate)
+  - [How to develop with this boilerplate](#how-to-develop-with-this-boilerplate)
+  - [How to deliver this boilerplate](#how-to-deliver-this-boilerplate)
   - [Hackathon startup](#hackathon-startup)
   - [Folder Structure](#folder-structure)
-  - [Config Documentations](#config-documentations)
+  - [Config References](#config-references)
   - [Errors References](#errors-references)
       - [ValidationError (400)](#validationerror-400)
       - [AutenticationError (401)](#autenticationerror-401)
@@ -24,25 +24,25 @@ _Welcome to my boilerplate for `nodeJS`, `typescript` and `expressJS`_
       - [BusinessError (422)](#businesserror-422)
       - [InternalServerError (500)](#internalservererror-500)
       - [NotImplementedError (501)](#notimplementederror-501)
-  - [References](#references)
+  - [Library References](#library-references)
   - [Todos:](#todos)
 
 ## Infos
 
- - Version of nodejs recommended and testes is v12.13.1 LTS
+ - Version of nodejs recommended, and tested, is v12.13.1 LTS
 
- - We recomemend you use the nvm to control the nodejs version. See more infos in [this](https://github.com/nvm-sh/nvm) link.
+ - We recomemend you use the nvm to control the nodejs version. See more infos in [this link](https://github.com/nvm-sh/nvm).
 
-## What's the objectives of out boilerplate
+## Objectives
 
- - People which are starting project for large scale.
- - Hackathon's attendeers, see [this](#hackathon-startup) pointer
- - Lovers of nodeJS
- - Companies that want to create projects that meet good practice requirements
+ - People which are starting large-scale projects.
+ - Hackathon's attendeers, see in [this section](#hackathon-startup).
+ - NodeJS Lovers 
+ - Companies which want to create projects that meet good practice requirements
 
 > All code of this boilerplate is opened. The reason for that is that all code is flexible. You can, and, you must read and change the code to answer your questions and requisites.
 
-## What have in our boileiplate
+## Tecnologies
 - Nodejs
 - Typescript
 - ExpressJS
@@ -57,7 +57,7 @@ _Welcome to my boilerplate for `nodeJS`, `typescript` and `expressJS`_
 - _[comming soon] CI/CD Integration and recomendation_
 - _[comming soon] Multiples datasources(sqlite, relational with sequelize, mongodb)_
 
-## About our stack, You need even know!
+## About our stack
 
 Really, we use the ExpressJS to processing out routes, but it's half-hidden. We use the [routing-controller](https://github.com/typestack/routing-controllers) to interact with the developer because this boilerplate follows the principles of DDD and Object-Oriented.
 
@@ -72,23 +72,23 @@ To validate your inputs by request, either by `querystring` or by `body`, we use
 
 ## How to start
 
-## How to development with this boilerplate
+## How to develop with this boilerplate
 
-## How to delivery this boilerplate
+## How to deliver this boilerplate
 
 ## Hackathon startup
 
 ## Folder Structure
 
-## Config Documentations
+## Config References
 
 ## Errors References
 
-The errors can be thrown in any place of application. But, if anyone of the below errors will throw inside a route, a controller, these errors will perform like an HTTP error and emit the relative status code.
+Errors can be thrown in any place of application. But, if any of below errors is thrown inside a route/controller, these errors will perform like a HTTP error and emit the relative status code.
 
 #### ValidationError (400)
 
-This error represent the validation data trafficked in the request. To validate data, we use the [`class-validator`](https://github.com/typestack/class-validator) and [`class-transform`](https://github.com/typestack/class-transformer). Both dependences are user by [`routing-controller`](https://github.com/typestack/routing-controllers).
+This error represents the validation of the sent data in the request. To validate data, we use the [`class-validator`](https://github.com/typestack/class-validator) and [`class-transform`](https://github.com/typestack/class-transformer). Both dependences are user by [`routing-controller`](https://github.com/typestack/routing-controllers).
 
 **We don't use the HttpErrors of Routing Controller, we prefer customize ours errors, based in Routing Controllers errors.**
 
@@ -116,7 +116,7 @@ This error represents any generic error that occurs inside of the application. I
 
 If you want implement a method and do not are completed. You can emit this error. But it's not recomended.
 
-## References
+## Library References
 
 - https://nodejs.org/
 - https://expressjs.com/
