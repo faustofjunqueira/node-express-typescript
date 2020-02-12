@@ -66,6 +66,8 @@ Another important thing is our `config` folder. It has the configuration values 
 By default, we apply the following middleware in the express application: `Body Parser`, `Cors` and `Helmet`. See about they:
 https://github.com/expressjs/body-parser, https://github.com/expressjs/cors and https://github.com/helmetjs/helmet. However, if you want perform file update, you need install `multer`. See in [`routing-controller`](https://github.com/typestack/routing-controllers#inject-uploaded-file) documentation.
 
+As for the application errors, we created a series of errors to facilitate the development, see **[Errors References](#errors-references)**. They are in the `errors` folder. Whenever you need to issue an error, first, implement an error by extending one of the base errors, you can leave it in the `errors` folder and then yes, use them.
+
 ## How to start
 
 ## How to development with this boilerplate
