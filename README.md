@@ -35,10 +35,10 @@ _Welcome to my boilerplate for `nodeJS`, `typescript` and `expressJS`_
 
 ## Objectives
 
- - People which are starting large-scale projects.
- - Hackathon's attendeers, see in [this section](#hackathon-startup).
- - NodeJS Lovers 
- - Companies which want to create projects that meet good practice requirements
+ - People which are starting large-scale projects;
+ - Hackathon's attendeers, see in [this section](#hackathon-startup);
+ - NodeJS Lovers;
+ - Companies which want to create projects that meet good practice requirements;
 
 > All code of this boilerplate is opened. The reason for that is that all code is flexible. You can, and, you must read and change the code to answer your questions and requisites.
 
@@ -48,14 +48,14 @@ _Welcome to my boilerplate for `nodeJS`, `typescript` and `expressJS`_
 - ExpressJS
 - Custom configuration values
 - Errors Controllers
-- _[comming soon] API Integration_
-- _[comming soon] Auth Integration with OAuth2_
-- _[comming soon] Crud Facilities_
-- _[comming soon] Logs with some controller_
-- _[comming soon] Monitoring_
-- _[comming soon] Docker Images_
-- _[comming soon] CI/CD Integration and recomendation_
-- _[comming soon] Multiples datasources(sqlite, relational with sequelize, mongodb)_
+- _[coming soon] API Integration_
+- _[coming soon] Auth Integration with OAuth2_
+- _[coming soon] Crud Facilities_
+- _[coming soon] Logs with some controller_
+- _[coming soon] Monitoring_
+- _[coming soon] Docker Images_
+- _[coming soon] CI/CD Integration and recomendation_
+- _[coming soon] Multiples datasources(sqlite, relational with sequelize, mongodb)_
 
 ## About our stack
 
@@ -88,17 +88,17 @@ Errors can be thrown in any place of application. But, if any of below errors is
 
 #### ValidationError (400)
 
-This error represents the validation of the sent data in the request. To validate data, we use the [`class-validator`](https://github.com/typestack/class-validator) and [`class-transform`](https://github.com/typestack/class-transformer). Both dependences are user by [`routing-controller`](https://github.com/typestack/routing-controllers).
+This error represents the validation of request payload. To validate data, we use the [`class-validator`](https://github.com/typestack/class-validator) and [`class-transform`](https://github.com/typestack/class-transformer). Both dependences are used by [`routing-controller`](https://github.com/typestack/routing-controllers).
 
-**We don't use the HttpErrors of Routing Controller, we prefer customize ours errors, based in Routing Controllers errors.**
+**We don't use HttpErrors of Routing Controller, we prefer to customize ours errors.**
 
 #### AutenticationError (401)
 
-_Comming soon, we will use the passport library and keycloak_
+_Coming soon, we will use the passport library and keycloak_
 
 #### AuthorizationError (403)
 
-_Comming soon, we will use the passport library and keycloak_
+_Coming soon, we will use the passport library and keycloak_
 
 #### NotFoundError (404)
 
@@ -106,15 +106,15 @@ If the resource is not found.
 
 #### BusinessError (422)
 
-_Comming soon_
+_Coming soon_
 
 #### InternalServerError (500)
 
-This error represents any generic error that occurs inside of the application. If error thrown not will handler, and happen inside of a controller, the boilerplate will transform this error in InternalServerError and emit the 500 status code.
+This error represents any generic error that occurs inside of the application. If error happen inside of a controller and is not handled, the boilerplate will transform this error in `InternalServerError` and emit the 500 status code.
 
 #### NotImplementedError (501)
 
-If you want implement a method and do not are completed. You can emit this error. But it's not recomended.
+If you want to implement a method and it isn't completed yet. You can emit this error, **but it's not recomended**.
 
 ## Library References
 
@@ -138,3 +138,10 @@ If you want implement a method and do not are completed. You can emit this error
  - Logging request middleware
  - Improved `cors` constraints
  - Improved `helmet` filters
+ - Integrations:
+   - Keycloak
+   - Redis
+   - ELK
+   - SQLZ
+   - Mongoose
+   - Monitoring ( Phometheus | Grafana )
