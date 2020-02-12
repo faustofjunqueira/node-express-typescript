@@ -71,11 +71,13 @@ https://github.com/expressjs/body-parser, https://github.com/expressjs/cors and 
 
 ## References
 
- - https://github.com/typestack/routing-controllers
- - https://github.com/lorenwest/node-config
- - https://github.com/expressjs/body-parser
- - https://github.com/expressjs/cors
- - https://github.com/helmetjs/helmet
+- https://github.com/typestack/routing-controllers
+- https://github.com/lorenwest/node-config
+- https://github.com/expressjs/body-parser
+- https://github.com/expressjs/cors
+- https://github.com/helmetjs/helmet
+- https://nodejs.org/api/http.html
+- https://nodejs.org/api/https.html
 
 ## Todos:
  - Improved `cors` constraints
