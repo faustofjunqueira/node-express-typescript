@@ -68,6 +68,8 @@ https://github.com/expressjs/body-parser, https://github.com/expressjs/cors and 
 
 As for the application errors, we created a series of errors to facilitate the development, see **[Errors References](#errors-references)**. They are in the `errors` folder. Whenever you need to issue an error, first, implement an error by extending one of the base errors, you can leave it in the `errors` folder and then yes, use them.
 
+To validate your inputs by request, either by `querystring` or by `body`, we use [`class-validator`](https://github.com/typestack/class-validator). Study it.
+
 ## How to start
 
 ## How to development with this boilerplate

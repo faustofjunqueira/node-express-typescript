@@ -11,6 +11,7 @@ http:
   routing-controller:
     cors: true
     classTransformer: true
+    validation: true
     defaultErrorHandler: false
     defaults:
       nullResultCode: 404

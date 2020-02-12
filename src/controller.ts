@@ -1,12 +1,17 @@
-import { NotFoundError } from './errors/NotFoundError';
-import {Controller, Get} from 'routing-controllers'
+import {Controller, Get, Body} from 'routing-controllers'
+import { IsString } from 'class-validator';
 
+class Data {
+
+  @IsString({message: `Oi mundo cao`})
+  field: string = "";
+}
 
 @Controller('/')
 export class Junda {
 
   @Get('/')
-  junda() {
-    throw new NotFoundError('Oi mundo cao', {junda:123123});
+  junda(@Body() junda: Data) {
+    return junda;
   }
 }

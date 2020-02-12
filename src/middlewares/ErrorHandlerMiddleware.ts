@@ -1,7 +1,8 @@
+import { NextFunction, Request, Response } from 'express';
 import { ExpressErrorMiddlewareInterface, Middleware } from "routing-controllers";
-import { InternalServerError } from '../errors/InternalServerError';
-import { Request, Response, NextFunction } from 'express';
 import { HttpError } from '../errors/HttpError';
+import { InternalServerError } from '../errors/InternalServerError';
+import { ValidationError } from '../errors/ValidationError';
 
 /**
  * Interface which represents error response for http request
@@ -30,6 +31,22 @@ export class ErrorHandlerMiddleware implements ExpressErrorMiddlewareInterface {
   }
 
   /**
+   * Check if is Validation Error
+   *
+   * @private
+   * @param {*} error
+   * @returns {boolean}
+   * @memberof ErrorHandlerMiddleware
+   */
+  private isValidationError(error: any): boolean {
+    return error 
+      && "httpCode" in error 
+      && "name" in error 
+      && error.name === 'BadRequestError' 
+      && error.httpCode === 400;
+  }
+
+  /**
    * Create a standard response format
    *
    * @private
@@ -54,7 +71,9 @@ export class ErrorHandlerMiddleware implements ExpressErrorMiddlewareInterface {
    * @memberof ErrorHandlerMiddleware
    */
   public error(error: any, _: Request, response: Response, next?: NextFunction): void {
-    let httpError: HttpError = this.isHttpError(error) ? error : new InternalServerError;
+    let httpError: HttpError = this.isValidationError(error) ? new ValidationError(error.errors) : error;
+    httpError = this.isHttpError(httpError) ? httpError : new InternalServerError;
+
     const json = this.applyResponseFormat(httpError);
 
     response
