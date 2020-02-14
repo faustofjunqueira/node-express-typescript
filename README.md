@@ -56,9 +56,9 @@ $ npm run test:cov
 
 ## TODO
 
-- [ ] Config
+- [x] Config
   - node-config
-- [ ] Test
+- [x] Test
   - jest
   - supertest
 - [ ] Test Implements
@@ -66,7 +66,7 @@ $ npm run test:cov
   - TypeORM with Logger
 - [ ] API Docs
   - Swagger
-- [ ] Validation Data
+- [x] Validation Data
   - class-validator
 - [ ] Runtime
   - docker
