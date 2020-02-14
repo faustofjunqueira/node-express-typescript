@@ -58,9 +58,10 @@ $ npm run test:cov
 
 - [ ] Config
   - node-config
-- [ ] test
+- [ ] Test
   - jest
   - supertest
+- [ ] Test Implements
 - [ ] Auditoria
   - TypeORM with Logger
 - [ ] API Docs

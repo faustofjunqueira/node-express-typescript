@@ -1,0 +1,7 @@
+
+### @name testeRoute
+POST http://localhost:8080/?teste=example
+
+{
+  "teste": 10
+}

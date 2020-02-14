@@ -1,3 +1,7 @@
+# Config
+config/development.*
+!config/development.example.yaml
+
 # Logs
 logs
 *.log
