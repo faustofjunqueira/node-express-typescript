@@ -17,7 +17,12 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "docker:build": "npm run build && docker-compose build --no-cache backend",
+    "docker:up": "docker-compose up -d",
+    "docker:up:build": "docker-compose up -d --build",
+    "docker:down": "docker-compose down",
+    "docker:restart": "npm run docker:down && npm run docker:up"
   },
   "dependencies": {
     "@nestjs/common": "^6.10.14",
@@ -69,5 +74,8 @@
     },
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
+  },
+  "engines": {
+    "node": "12.16.0"
   }
 }

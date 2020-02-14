@@ -1,0 +1,21 @@
+version: '3.7'
+services:
+    backend:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        environment:
+            APP_HTTP_PORT: 80
+        ports:
+            - "8080:80"
+        depends_on:
+            - postgres
+    postgres:
+        image: postgres
+        restart: always
+        environment:
+            POSTGRES_PASSWORD: mysecretpassword
+            POSTGRES_USER: myuser
+            POSTGRES_DB: mydb
+        volumes:
+            - ./docker/volumes/postgres/data:/var/lib/postgresql/data

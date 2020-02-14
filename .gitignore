@@ -2,6 +2,9 @@
 config/development.*
 !config/development.example.yaml
 
+# Docker
+docker/volumes
+
 # Logs
 logs
 *.log

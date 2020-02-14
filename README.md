@@ -62,6 +62,7 @@ $ npm run test:cov
 - [x] Test
   - jest
   - supertest
+- [ ] Package Script Commands
 - [ ] Test Implements
 - [ ] Auditoria
   - TypeORM with Logger
@@ -94,3 +95,13 @@ $ npm run test:cov
 - [ ] Log
    -  ELK
    -  winston
+
+**Todo Documentations**:
+- [ ] Config
+- [ ] Config Env Var
+- [ ] Package Script Commmands
+- [ ] Docker & Docker Compose
+- [ ] Validate Data
+- [ ] Explain about each file in root folder
+- [ ] Explain docker-compose
+- [ ] Explain dockerfile

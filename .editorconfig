@@ -16,3 +16,17 @@ indent_style = tab
 
 [*.mk]
 indent_style = tab
+
+[*.yml]
+charset = utf-8
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[Dockerfile]
+charset = utf-8
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = true
+insert_final_newline = true
