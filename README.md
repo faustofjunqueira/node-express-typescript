@@ -58,6 +58,7 @@ $ npm run test:cov
 
 - [x] Config
   - node-config
+- [ ] Config with environment variables (partial)
 - [x] Test
   - jest
   - supertest
