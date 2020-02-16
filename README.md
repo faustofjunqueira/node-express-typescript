@@ -62,11 +62,9 @@ $ npm run test:cov
 - [x] Test
   - jest
   - supertest
-- [ ] Package Script Commands
-- [ ] Test Implements
 - [ ] Auditoria
   - TypeORM with Logger
-- [ ] API Docs
+- [x] API Docs
   - Swagger
 - [x] Validation Data
   - class-validator
@@ -95,6 +93,14 @@ $ npm run test:cov
 - [ ] Log
    -  ELK
    -  winston
+-  [ ] Check Recipes Section
+-  [ ] Craete Example Structure
+   -  [ ] Crud
+   -  [ ] With Swagger Documentation In DTO
+   -  [ ] With Swagger Documentation In Route
+   -  [ ] Validation field
+   -  [ ] Layers
+
 
 **Todo Documentations**:
 - [ ] Config
