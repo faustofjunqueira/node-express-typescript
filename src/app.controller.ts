@@ -3,7 +3,7 @@ import { IsString } from 'class-validator';
 import { AppService } from './app.service';
 
 class Example {
-  
+
   @IsString()
   public teste: string;
 
@@ -15,6 +15,7 @@ export class AppController {
 
   @Post()
   getHello(@Body() teste: Example): string {
+    throw new Error("Junda");
     return this.appService.getHello();
   }
 }

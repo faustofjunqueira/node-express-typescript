@@ -58,7 +58,7 @@ $ npm run test:cov
 
 - [x] Config
   - node-config
-- [ ] Config with environment variables (partial)
+- [x] Config with environment variables (partial)
 - [x] Test
   - jest
   - supertest
@@ -70,10 +70,10 @@ $ npm run test:cov
   - Swagger
 - [x] Validation Data
   - class-validator
-- [ ] Runtime
+- [x] Runtime
   - docker
   - docker-compose
-- [ ] Response Error Handler
+- [x] Response Error Handler
 - [ ] Crud
 - [ ] Cache
    -  Redis
@@ -105,3 +105,5 @@ $ npm run test:cov
 - [ ] Explain about each file in root folder
 - [ ] Explain docker-compose
 - [ ] Explain dockerfile
+- [ ] Explain how to develop with this code
+- [ ] Explain The Stack

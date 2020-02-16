@@ -1,4 +1,4 @@
-import { BadRequestException } from "@nestjs/common";
+import { HttpException, HttpStatus } from "@nestjs/common";
 import { ValidationError } from 'class-validator';
 
 /**
@@ -8,7 +8,7 @@ import { ValidationError } from 'class-validator';
  * @class ValidationExcetion
  * @extends {BadRequestException}
  */
-export class ValidationExcetion extends BadRequestException {
+export class ValidationExcetion extends HttpException {
 
   /**
    * Creates an instance of ValidationExcetion.
@@ -16,6 +16,6 @@ export class ValidationExcetion extends BadRequestException {
    * @memberof ValidationExcetion
    */
   constructor(public data: ValidationError[]) {
-    super('Validation Data')
+    super({ data, }, HttpStatus.BAD_REQUEST);
   }
 }
