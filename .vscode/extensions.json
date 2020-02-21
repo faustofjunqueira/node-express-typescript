@@ -6,6 +6,7 @@
     "yzhang.markdown-all-in-one",
     "humao.rest-client",
     "editorconfig.editorconfig",
-    "gruntfuggly.todo-tree"
+    "gruntfuggly.todo-tree",
+    "redhat.vscode-yaml"
   ]
 }

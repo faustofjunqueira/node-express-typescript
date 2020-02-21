@@ -112,9 +112,11 @@ $ npm run test:cov
 - [ ] Docker & Docker Compose
 - [ ] Validate Data
 - [ ] Swagger
-- [ ] Explain about health check
 - [ ] Explain about each file in root folder
 - [ ] Explain docker-compose
 - [ ] Explain dockerfile
 - [ ] Explain how to develop with this code
 - [ ] Explain The Stack
+- [ ] Explain healthcheck
+  - [ ] Dockerfile
+  - [ ] Config default

@@ -1,0 +1,7 @@
+
+### @name swagger-ui
+GET http://localhost:8080/api
+
+###
+### @name healthcheck
+GET http://localhost:8080/health

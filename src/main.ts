@@ -4,7 +4,7 @@ import { INestApplication } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { AppModule } from './app.module';
-import { ValidationPipe } from './core/validation.pipe';
+import { ValidationPipe } from './core/validation/validation.pipe';
 import config = require('config');
 
 async function bootstrap() {
