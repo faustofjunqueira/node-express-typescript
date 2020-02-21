@@ -1,11 +1,11 @@
-import { INestApplication } from '@nestjs/common';
 process.env["NODE_CONFIG_DIR"] = __dirname + "/../config/";
 import 'reflect-metadata';
+import { INestApplication } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
+import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { AppModule } from './app.module';
 import { ValidationPipe } from './core/validation.pipe';
 import config = require('config');
-import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);

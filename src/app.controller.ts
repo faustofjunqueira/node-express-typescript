@@ -1,11 +1,16 @@
 import { Body, Controller, Post } from '@nestjs/common';
 import { IsString } from 'class-validator';
 import { AppService } from './app.service';
+import { ApiProperty } from '@nestjs/swagger';
 
 class Example {
 
+  @ApiProperty({
+    description: "Example of documentation field"
+  })
   @IsString()
   public teste: string;
+
 
 }
 
@@ -15,7 +20,6 @@ export class AppController {
 
   @Post()
   getHello(@Body() teste: Example): string {
-    throw new Error("Junda");
     return this.appService.getHello();
   }
 }

@@ -73,13 +73,12 @@ $ npm run test:cov
   - docker-compose
 - [x] Response Error Handler
 - [ ] Crud
-- [ ] Cache
-   -  Redis
 - [ ] BD
    -  E/R
+      -  TypeORM
+      -  Sequelize
+      -  Knex
    -  Mongoose
-   -  TypeORM
-   -  Sequelize
 - [ ] I18N
 - [ ] Auth
    -  Oauth2
@@ -100,6 +99,10 @@ $ npm run test:cov
    -  [ ] With Swagger Documentation In Route
    -  [ ] Validation field
    -  [ ] Layers
+-  [ ] Migrates
+-  [ ] Server Rendering
+   -  [ ] Next.js
+-  [ ] DTO de reposta de tela
 
 
 **Todo Documentations**:
@@ -108,6 +111,8 @@ $ npm run test:cov
 - [ ] Package Script Commmands
 - [ ] Docker & Docker Compose
 - [ ] Validate Data
+- [ ] Swagger
+- [ ] Explain about health check
 - [ ] Explain about each file in root folder
 - [ ] Explain docker-compose
 - [ ] Explain dockerfile

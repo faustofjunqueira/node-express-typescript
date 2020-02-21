@@ -5,6 +5,7 @@
     "eamodio.gitlens",
     "yzhang.markdown-all-in-one",
     "humao.rest-client",
-    "editorconfig.editorconfig"
+    "editorconfig.editorconfig",
+    "gruntfuggly.todo-tree"
   ]
 }
