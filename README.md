@@ -103,6 +103,7 @@ $ npm run test:cov
 -  [ ] Server Rendering
    -  [ ] Next.js
 -  [ ] DTO de reposta de tela
+-  [ ] Azure CI
 
 
 **Todo Documentations**:
@@ -120,3 +121,4 @@ $ npm run test:cov
 - [ ] Explain healthcheck
   - [ ] Dockerfile
   - [ ] Config default
+- [ ] Documentation Code

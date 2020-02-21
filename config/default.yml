@@ -1,5 +1,6 @@
 http:
     server:
+        # The port is set, too, in Dockerfile, see also there
         port: 8080
 
 swagger:
