@@ -1,14 +1,14 @@
 import { Type } from "@nestjs/common";
 import { Connection, ConnectionOptions, createConnection } from "typeorm";
-import { BaseEntity } from './base-entity';
+import { BaseCrudEntity } from './base-crud-entity';
 import config = require('config');
 import path = require('path');
 
-const databaseConnectionProviderName = 'DATABASE_CONNECTION';
+export const DATABASE_CONNECTION = 'DATABASE_CONNECTION';
 
 export const databaseProvider = [
   {
-    provider: databaseConnectionProviderName,
+    provider: DATABASE_CONNECTION,
     useFactory: async () => await createConnection({
       ...config.get('database') as ConnectionOptions,
       // Load all entities's paths relative over src folder
@@ -20,9 +20,9 @@ export const databaseProvider = [
 /**
  * Create name of repository provider
  *
- * @param {Type<BaseEntity>} entityClass
+ * @param {Type<BaseCrudEntity>} entityClass
  */
-export function getRepository<T extends BaseEntity>(entityClass: Type<T>) {
+export function getRepository<T extends BaseCrudEntity>(entityClass: Type<T>) {
   return `${entityClass.name.toUpperCase()}_REPOSITORY`;
 }
 
@@ -38,10 +38,10 @@ export function getRepository<T extends BaseEntity>(entityClass: Type<T>) {
  *  const exampleRepository = createRepository(Example)
  *
  */
-export function createRepository<T extends BaseEntity>(entityClass: Type<T>) {
+export function createRepository<T extends BaseCrudEntity>(entityClass: Type<T>) {
   return {
     provide: getRepository(entityClass),
     useFactory: (connection: Connection) => connection.getRepository(entityClass),
-    inject: [databaseConnectionProviderName]
+    inject: [DATABASE_CONNECTION]
   }
 }

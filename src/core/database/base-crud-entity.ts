@@ -1,6 +1,6 @@
 import { PrimaryGeneratedColumn } from "typeorm";
 
-export abstract class BaseEntity {
+export abstract class BaseCrudEntity {
 
   /**
    * All table should have a unique column as ID (primary key).
