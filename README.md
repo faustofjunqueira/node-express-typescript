@@ -13,12 +13,10 @@ _Welcome to my boilerplate for `nodeJS`, `typescript` and `expressJS`, using `ne
 ## Infos
 
 **Version recommended and tested**:
-- Nodejs v12.13.1 LTS, _we recomemend you use the nvm to control the nodejs version. See more infos in [this link](https://github.com/nvm-sh/nvm)_.
-- NPM v6.13.2
-- Typescript v3.7.4
-- NestJS CLI v6.14.2
-
-
+- Nodejs **v12.13.1 LTS**, _we recomemend you use the nvm to control the nodejs version. See more infos in [this link](https://github.com/nvm-sh/nvm)_.
+- NPM **v6.13.2**
+- Typescript **v3.7.4**
+- NestJS CLI **v6.14.2**
 
 ## Commands
 
@@ -76,14 +74,13 @@ $ npm run test:cov
 - [ ] BD
    -  E/R
       -  TypeORM
-      -  Sequelize
-      -  Knex
+      -  Remove package pg =/ e coloca-lo como peer
    -  Mongoose
 - [ ] I18N
 - [ ] Auth
    -  Oauth2
    -  keycloak
-   -  Autentication Code with PKCE
+   -  [Autentication Code with PKCE](https://auth0.com/docs/api-auth/tutorials/authorization-code-grant-pkce)
    -  passport
    -  passport-oauth2
 - [ ] Monitoring
@@ -104,6 +101,7 @@ $ npm run test:cov
    -  [ ] Next.js
 -  [ ] DTO de reposta de tela
 -  [ ] Azure CI
+-  [ ] Email
 
 
 **Todo Documentations**:
@@ -122,3 +120,5 @@ $ npm run test:cov
   - [ ] Dockerfile
   - [ ] Config default
 - [ ] Documentation Code
+- [ ] Explain that we use TypeORM and not sequelize
+  - [ ] Explain that you need to install database dependence, like, mysql

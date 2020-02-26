@@ -21,3 +21,14 @@ healthcheck:
     url: /health
     ping:
         google: https://www.google.com
+
+database:
+    type: pg
+    host: localhost
+    port: 5432
+    username: admin
+    password: mysecretpassword
+    database: backend
+    entities:
+        - '**/*.entity{.ts,.js}'
+    synchronize: true
