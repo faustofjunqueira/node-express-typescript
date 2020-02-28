@@ -1,17 +1,18 @@
-import { Column, Entity } from "typeorm";
-import { BaseCrudEntity } from '../core/database/base-crud-entity';
+import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 /**
  * Please, all entity need extends from BaseEntity, because BaseEntity have a ID Column as UUID
  *
  * @export
  * @class Example
- * @extends {BaseCrudEntity}
  */
 @Entity({
   name: "example"
 })
-export class Example extends BaseCrudEntity {
+export class Example {
+
+  @PrimaryGeneratedColumn("uuid")
+  id: string;
 
   @Column({ length: 500 })
   name: string;

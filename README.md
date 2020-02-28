@@ -122,3 +122,4 @@ $ npm run test:cov
 - [ ] Documentation Code
 - [ ] Explain that we use TypeORM and not sequelize
   - [ ] Explain that you need to install database dependence, like, mysql
+- [ ] Pagination engine

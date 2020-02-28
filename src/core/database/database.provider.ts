@@ -1,6 +1,5 @@
 import { Type } from "@nestjs/common";
 import { Connection, ConnectionOptions, createConnection } from "typeorm";
-import { BaseCrudEntity } from './base-crud-entity';
 import config = require('config');
 import path = require('path');
 
@@ -19,10 +18,10 @@ export const databaseProvider = [
 
 /**
  * Create name of repository provider
- *
- * @param {Type<BaseCrudEntity>} entityClass
+ * @template T
+ * @param {Type<T>} entityClass
  */
-export function getRepository<T extends BaseCrudEntity>(entityClass: Type<T>) {
+export function getRepository<T>(entityClass: Type<T>) {
   return `${entityClass.name.toUpperCase()}_REPOSITORY`;
 }
 
@@ -35,10 +34,10 @@ export function getRepository<T extends BaseCrudEntity>(entityClass: Type<T>) {
  * @param {Type<T>} entityClass
  * @returns Provider of repository
  * @example
- *  const exampleRepository = createRepository(Example)
+ * const exampleRepository = createRepository(Example)
  *
  */
-export function createRepository<T extends BaseCrudEntity>(entityClass: Type<T>) {
+export function createRepository<T>(entityClass: Type<T>) {
   return {
     provide: getRepository(entityClass),
     useFactory: (connection: Connection) => connection.getRepository(entityClass),

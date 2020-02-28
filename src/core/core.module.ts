@@ -3,6 +3,7 @@ import { Module } from '@nestjs/common';
 import { TerminusOptionsService } from './terminus-options/terminus-options.service';
 import { TerminusModule } from '@nestjs/terminus';
 import { databaseProvider } from './database/database.provider';
+import { PaginateFactory } from './form/paginate-factory';
 
 @Module({
   imports: [
@@ -10,7 +11,7 @@ import { databaseProvider } from './database/database.provider';
       useClass: TerminusOptionsService,
     }),
   ],
-  providers: [ValidationPipe, ...(databaseProvider as any[])],
+  providers: [ValidationPipe, ...(databaseProvider as any[]), PaginateFactory],
   exports: [ValidationPipe, ...(databaseProvider as any[])]
 })
 export class CoreModule { }
